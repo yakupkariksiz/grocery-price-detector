@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  prometheus:
+    image: prom/prometheus
+    volumes:
+      - ./prometheus:/etc/prometheus
+    ports:
+      - "9090:9090"  # Map Prometheus port
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
