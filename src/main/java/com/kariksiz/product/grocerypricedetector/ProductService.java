@@ -1,4 +1,4 @@
-package com.kariksiz.product.grocerypricedetector.controller;
+package com.kariksiz.product.grocerypricedetector;
 
 import org.springframework.stereotype.Service;
 

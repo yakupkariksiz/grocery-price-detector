@@ -3,6 +3,7 @@ package com.kariksiz.product.grocerypricedetector.controller;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import com.kariksiz.product.grocerypricedetector.ProductService;
 import com.kariksiz.product.grocerypricedetector.entity.Product;
 
 import java.util.List;

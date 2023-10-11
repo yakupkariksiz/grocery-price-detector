@@ -1,6 +1,11 @@
 version: '3'
 
 services:
+  my-spring-boot-service:
+    image: myimage:1.0
+    ports:
+      - "8080:8080"
+
   prometheus:
     image: prom/prometheus
     volumes:
