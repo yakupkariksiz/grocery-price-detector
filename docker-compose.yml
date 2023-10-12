@@ -2,11 +2,13 @@ version: '3'
 
 services:
   my-spring-boot-service:
-    image: myimage:1.0
+    container_name: app
+    image: gpd:latest
     ports:
       - "8080:8080"
 
   prometheus:
+    container_name: prometheus
     image: prom/prometheus
     volumes:
       - ./prometheus:/etc/prometheus
@@ -14,3 +16,5 @@ services:
       - "9090:9090"  # Map Prometheus port
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
+    depends_on:
+      - my-spring-boot-service
